@@ -9,7 +9,7 @@ wget https://raw.githubusercontent.com/amsclark/PikaInstallScripts/master/LightS
 sudo -s
 bash ./LightSail.sh
 ```
-Here is an example as to how to run it after logging into a Centos 7.6 Digital Ocean Droplet for the first time
+Here is an example as to how to run it after logging into a Centos 7.6 Digital Ocean Droplet for the first time as root. Please note, it'll hang for a minute on libgcc when yum update runs as part of the script
 ```
 curl -LJO https://raw.githubusercontent.com/amsclark/PikaInstallScripts/master/Centos7.6onDigitalOcean.sh
 bash ./Centos7.6onDigitalOcean.sh
