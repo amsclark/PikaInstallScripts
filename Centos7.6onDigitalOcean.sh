@@ -13,7 +13,7 @@ EOF
 yum -y update
 yum -y install mariadb mariadb-server vim httpd wget zip unzip mod_ssl openssl php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php-xml php-mbstring php-soap percona-toolkit
 systemctl start httpd
-systemctl enable apache
+systemctl enable httpd
 systemctl start mariadb
 systemctl enable mariadb
 apachectl restart
