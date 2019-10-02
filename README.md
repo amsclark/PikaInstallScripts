@@ -9,3 +9,8 @@ wget https://raw.githubusercontent.com/amsclark/PikaInstallScripts/master/LightS
 sudo -s
 bash ./LightSail.sh
 ```
+Here is an example as to how to run it after logging into a Centos 7.6 Digital Ocean Droplet for the first time
+```
+curl -LJO https://raw.githubusercontent.com/amsclark/PikaInstallScripts/master/Centos7.6onDigitalOcean.sh
+bash ./Centos7.6onDigitalOcean.sh
+```
