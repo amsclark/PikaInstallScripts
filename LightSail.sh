@@ -23,7 +23,7 @@ fi
 
 if [[ -d $HTDOCSPATH ]]
 then
-wget --quiet -P $HTDOCSPATH https://github.com/aworley/ocm/archive/master.zip
+wget --quiet -P $HTDOCSPATH https://gitlab.com/amsclark/OCM/-/archive/master/OCM-master.zip
   unzip -qq ${HTDOCSPATH}master.zip 'ocm-master/cms/*' -d $HTDOCSPATH
   unzip -qq ${HTDOCSPATH}master.zip 'ocm-master/cms-custom/*' -d $HTDOCSPATH
   mv ${HTDOCSPATH}ocm-master/cms ${HTDOCSPATH}cms
