@@ -24,12 +24,12 @@ fi
 if [[ -d $HTDOCSPATH ]]
 then
 wget --quiet -P $HTDOCSPATH https://gitlab.com/amsclark/OCM/-/archive/master/OCM-master.zip
-  unzip -qq ${HTDOCSPATH}master.zip 'ocm-master/cms/*' -d $HTDOCSPATH
-  unzip -qq ${HTDOCSPATH}master.zip 'ocm-master/cms-custom/*' -d $HTDOCSPATH
-  mv ${HTDOCSPATH}ocm-master/cms ${HTDOCSPATH}cms
-  mv ${HTDOCSPATH}ocm-master/cms-custom ${HTDOCSPATH}cms-custom
-  rm -rf ${HTDOCSPATH}ocm-master
-  rm -rf ${HTDOCSPATH}master.zip
+  unzip -qq ${HTDOCSPATH}OCM-master.zip 'ocm-master/cms/*' -d $HTDOCSPATH
+  unzip -qq ${HTDOCSPATH}OCM-master.zip 'ocm-master/cms-custom/*' -d $HTDOCSPATH
+  mv ${HTDOCSPATH}OCM-master/cms ${HTDOCSPATH}cms
+  mv ${HTDOCSPATH}OCM-master/cms-custom ${HTDOCSPATH}cms-custom
+  rm -rf ${HTDOCSPATH}OCM-master
+  rm -rf ${HTDOCSPATH}OCM-master.zip
 #  sed -i 's/htdocs/htdocs\/cms/g' "${CONFPATH}httpd.conf"
 #  sed -i 's/htdocs/htdocs\/cms/g' "${CONFPATH}bitnami/bitnami.conf"
   apachectl restart
