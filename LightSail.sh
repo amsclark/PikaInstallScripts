@@ -24,8 +24,8 @@ fi
 if [[ -d $HTDOCSPATH ]]
 then
 wget --quiet -P $HTDOCSPATH https://gitlab.com/amsclark/OCM/-/archive/master/OCM-master.zip
-  unzip -qq ${HTDOCSPATH}OCM-master.zip 'ocm-master/cms/*' -d $HTDOCSPATH
-  unzip -qq ${HTDOCSPATH}OCM-master.zip 'ocm-master/cms-custom/*' -d $HTDOCSPATH
+  unzip -qq ${HTDOCSPATH}OCM-master.zip 'OCM-master/cms/*' -d $HTDOCSPATH
+  unzip -qq ${HTDOCSPATH}OCM-master.zip 'OCM-master/cms-custom/*' -d $HTDOCSPATH
   mv ${HTDOCSPATH}OCM-master/cms ${HTDOCSPATH}cms
   mv ${HTDOCSPATH}OCM-master/cms-custom ${HTDOCSPATH}cms-custom
   rm -rf ${HTDOCSPATH}OCM-master
