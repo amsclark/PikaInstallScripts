@@ -35,7 +35,8 @@ wget --quiet -P $HTDOCSPATH https://gitlab.com/amsclark/OCM/-/archive/master/OCM
   apachectl restart
   mysql -uroot -p${BITNAMIPASS} -e "create database cms"
   cat ${HTDOCSPATH}cms/app/sql/install/new_install.sql | mysql -uroot -p${BITNAMIPASS} cms
-  sed -i "s/'db_password' => ''/'db_password' => '${BITNAMIPASS}'/" ${HTDOCSPATH}CMS-custom/config/settings.php
+  cp ${HTDOCSPATH}cms-custom/config/settings.php.example ${HTDOCSPATH}cms-custom/config/settings.php
+  sed -i "s/'db_password' => ''/'db_password' => '${BITNAMIPASS}'/" ${HTDOCSPATH}cms-custom/config/settings.php
   mysql -uroot -p${BITNAMIPASS} -e "update users set username='support', password=md5('${SUPPORTPW}')" cms
   sed -i '172,175 {s/^/\/\//}' ${HTDOCSPATH}cms/app/lib/pikaAuth.php
   rm ${HTDOCSPATH}index.html
